@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    
+    <!-- ✅ Navbar remains unchanged -->
+    <nav class="navbar">
+        <h1>QR Code Generator</h1>
+    </nav>
+    
+    <!-- ✅ Main Box -->
+    <div class="box">
+        <div class="left-side">
+            <input type="text" id="input" placeholder="Enter text or URL">
+            <label for="errorCorrection">Error Correction:</label>
+            <select id="errorCorrection">
+                <option value="L">Low</option>
+                <option value="M">Medium</option>
+                <option value="Q">High</option>
+                <option value="H">Highest</option>
+            </select>
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="100">100x100</option>
+                <option value="150">150x150</option>
+                <option value="200">200x200</option>
+                <option value="250">250x250</option>
+            </select>
+            <button class="generate">Generate QR Code</button>
+            <button class="download">Download</button>
+        </div>
+        
+        <div class="right-side">
+            <div class="boxs" id="qrContainer"></div>
+        </div>
+    </div>
+    
+    <script src="js.js"></script>
+
+
+</body>
+</html>
